@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- =========================================
+         DOCUMENT HEAD: SEO, RESPONSIVE VIEWPORT
+    ========================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal visual journal of travel, rides, moments and memories.">
+    <meta name="theme-color" content="#10131b">
+    <title>Rupom — Visual Journal</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <!-- =========================================
+         PRELOADER
+    ========================================== -->
+    <div class="preloader" id="preloader">
+        <div class="loader-mark">R<span>.</span></div>
+        <div class="loader-line"><span></span></div>
+        <small>COLLECTING MOMENTS</small>
+    </div>
+
+    <!-- =========================================
+         NAVIGATION BAR
+    ========================================== -->
+    <nav class="navbar navbar-expand-lg fixed-top site-nav" id="siteNav">
+        <div class="container">
+            <a class="navbar-brand brand-mark" href="#home">RUPOM<span>.</span><small>VISUAL JOURNAL</small></a>
+            <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#collections">Collections</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><i
+                                class="bi bi-moon-stars"></i></button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- =========================================
+             HERO SECTION
+        ========================================== -->
+        <section class="hero-section" id="home">
+            <div class="hero-orb orb-one"></div>
+            <div class="hero-orb orb-two"></div>
+            <div class="container hero-content">
+                <div class="eyebrow"><span class="eyebrow-line"></span> A COLLECTION OF LITTLE BIG MOMENTS</div>
+                <div class="row align-items-end gy-4">
+                    <div class="col-lg-8">
+                        <h1>Life looks better<br>through a <em>lens.</em></h1>
+                        <p class="hero-copy">A personal visual journal of roads travelled, places discovered, and
+                            moments worth keeping.</p>
+                        <a href="#gallery" class="btn btn-accent">Explore the gallery <i
+                                class="bi bi-arrow-down-right"></i></a>
+                    </div>
+                    <div class="col-lg-4 hero-side-note">
+                        <div class="hero-note-number">01 <span>/ 04</span></div>
+                        <p>TRAVEL · RIDES · NATURE · EVERYDAY STORIES</p>
+                    </div>
+                </div>
+                <div class="hero-bottom">
+                    <span><i class="bi bi-geo-alt"></i> KISHOREGANJ, BANGLADESH</span>
+                    <span>SCROLL TO DISCOVER <i class="bi bi-arrow-down"></i></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             COLLECTION CATEGORY CARDS
+        ========================================== -->
+        <section class="collections-section section-pad" id="collections">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div><span class="eyebrow">BROWSE BY MOOD</span>
+                        <h2>Curated <em>collections.</em></h2>
+                    </div>
+                    <p>Different frames, different feelings.<br>Choose a collection to explore.</p>
+                </div>
+                <div class="row g-3 collection-grid">
+                    <div class="col-6 col-lg-3">
+                        <button class="collection-card collection-travel" data-filter="Travel">
+                            <span class="collection-index">01</span><span class="collection-icon"><i
+                                    class="bi bi-globe-asia-australia"></i></span>
+                            <strong>Travel diaries</strong><small>Places &amp; journeys</small><i
+                                class="bi bi-arrow-up-right card-arrow"></i>
+                        </button>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <button class="collection-card collection-rides" data-filter="Bike Ride">
+                            <span class="collection-index">02</span><span class="collection-icon"><i
+                                    class="bi bi-bicycle"></i></span>
+                            <strong>Ride stories</strong><small>Roads &amp; freedom</small><i
+                                class="bi bi-arrow-up-right card-arrow"></i>
+                        </button>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <button class="collection-card collection-nature" data-filter="Nature">
+                            <span class="collection-index">03</span><span class="collection-icon"><i
+                                    class="bi bi-flower1"></i></span>
+                            <strong>Nature frames</strong><small>Quiet &amp; beautiful</small><i
+                                class="bi bi-arrow-up-right card-arrow"></i>
+                        </button>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <button class="collection-card collection-moments" data-filter="Moments">
+                            <span class="collection-index">04</span><span class="collection-icon"><i
+                                    class="bi bi-camera"></i></span>
+                            <strong>Daily moments</strong><small>Life as it happens</small><i
+                                class="bi bi-arrow-up-right card-arrow"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             PHOTO GALLERY SECTION
+             Add/remove photo cards here in HTML.
+             Each card has a format class:
+             portrait = 9:16 (TikTok / Reels / Shorts)
+             landscape = 16:9 (YouTube)
+             instagram = 4:5 (Instagram portrait)
+             square = 1:1 (Instagram square)
+        ========================================== -->
+        <section class="gallery-section section-pad" id="gallery">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div><span class="eyebrow">THE PHOTO ARCHIVE</span>
+                        <h2>Frames &amp; <em>memories.</em></h2>
+                    </div>
+                    <p>Every photo has a story.<br>Here are a few places to begin.</p>
+                </div>
+
+                <!-- Gallery toolbar: category filters + search -->
+                <div class="gallery-toolbar reveal">
+                    <div class="filter-list" id="filterList">
+                        <button class="filter-btn active" data-filter="All">All photos <span>40</span></button>
+                        <button class="filter-btn" data-filter="Travel">Travel</button>
+                        <button class="filter-btn" data-filter="Bike Ride">Bike rides</button>
+                        <button class="filter-btn" data-filter="Nature">Nature</button>
+                        <button class="filter-btn" data-filter="Moments">Moments</button>
+                    </div>
+                    <label class="search-box"><i class="bi bi-search"></i><input type="search" id="gallerySearch"
+                            placeholder="Search memories..." aria-label="Search photos"></label>
+                </div>
+
+                <!-- Photo cards are written directly in HTML for easy replacement -->
+                <div class="row g-4 gallery-grid" id="galleryGrid">
+
+                    <!-- TRAVEL PHOTO CARDS -->
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Travel"
+                        data-title="A quiet morning in the hills">
+                        <article class="photo-card">
+                            <div class="photo-frame format-landscape"><img
+                                    src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85"
+                                    alt="Mountain lake at sunrise" loading="lazy"><span class="format-tag">16:9 ·
+                                    YouTube</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>TRAVEL DIARY</span><time datetime="2026-01-12">12 JAN
+                                        2026</time></div>
+                                <h3>A quiet morning in the hills</h3>
+                                <p>Fresh air, endless views, and a morning worth remembering.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Sajek Valley, Bangladesh</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Travel"
+                        data-title="The road to somewhere">
+                        <article class="photo-card">
+                            <div class="photo-frame format-portrait"><img
+                                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=85"
+                                    alt="Scenic road through mountains" loading="lazy"><span class="format-tag">9:16 ·
+                                    TikTok / Reels</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>TRAVEL DIARY</span><time datetime="2026-02-08">08 FEB
+                                        2026</time></div>
+                                <h3>The road to somewhere</h3>
+                                <p>Sometimes the journey is the best part of the destination.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Bandarban, Bangladesh</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Travel"
+                        data-title="Blue hour by the water">
+                        <article class="photo-card">
+                            <div class="photo-frame format-instagram"><img
+                                    src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=85"
+                                    alt="Lake and mountain landscape" loading="lazy"><span class="format-tag">4:5 ·
+                                    Instagram</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>TRAVEL DIARY</span><time datetime="2026-02-14">14 FEB
+                                        2026</time></div>
+                                <h3>Blue hour by the water</h3>
+                                <p>A peaceful pause beside a beautiful stretch of water.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Kaptai Lake, Bangladesh</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Travel"
+                        data-title="A little town, a big story">
+                        <article class="photo-card">
+                            <div class="photo-frame format-square"><img
+                                    src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=85"
+                                    alt="Beautiful city skyline at dusk" loading="lazy"><span class="format-tag">1:1 ·
+                                    Square</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>TRAVEL DIARY</span><time datetime="2026-03-02">02 MAR
+                                        2026</time></div>
+                                <h3>A little town, a big story</h3>
+                                <p>Wandering through streets with stories in every corner.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Old Town</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Travel"
+                        data-title="Somewhere in the green">
+                        <article class="photo-card">
+                            <div class="photo-frame format-landscape"><img
+                                    src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=85"
+                                    alt="Sunlight in a green forest" loading="lazy"><span class="format-tag">16:9 ·
+                                    YouTube</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>TRAVEL DIARY</span><time datetime="2026-03-16">16 MAR
+                                        2026</time></div>
+                                <h3>Somewhere in the green</h3>
+                                <p>A trail, a little sunlight, and no hurry to return.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Forest trail</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- BIKE RIDE PHOTO CARDS -->
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Bike Ride"
+                        data-title="Two wheels, endless roads">
+                        <article class="photo-card">
+                            <div class="photo-frame format-portrait"><img
+                                    src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=85"
+                                    alt="Motorcycle on an open road" loading="lazy"><span class="format-tag">9:16 ·
+                                    TikTok / Reels</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>RIDE STORIES</span><time datetime="2026-01-20">20 JAN
+                                        2026</time></div>
+                                <h3>Two wheels, endless roads</h3>
+                                <p>Throttle, fresh air, and the freedom to explore.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Country road</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Bike Ride"
+                        data-title="Chasing the sunset">
+                        <article class="photo-card">
+                            <div class="photo-frame format-landscape"><img
+                                    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85"
+                                    alt="Mountain peaks at sunset" loading="lazy"><span class="format-tag">16:9 ·
+                                    YouTube</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>RIDE STORIES</span><time datetime="2026-02-11">11 FEB
+                                        2026</time></div>
+                                <h3>Chasing the sunset</h3>
+                                <p>One more turn before the day says goodbye.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Hill road</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Bike Ride"
+                        data-title="The long way home">
+                        <article class="photo-card">
+                            <div class="photo-frame format-instagram"><img
+                                    src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=85"
+                                    alt="Evening sky over a road" loading="lazy"><span class="format-tag">4:5 ·
+                                    Instagram</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>RIDE STORIES</span><time datetime="2026-02-25">25 FEB
+                                        2026</time></div>
+                                <h3>The long way home</h3>
+                                <p>Taking the scenic route, just because I can.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Riverside road</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Bike Ride"
+                        data-title="A stop with a view">
+                        <article class="photo-card">
+                            <div class="photo-frame format-square"><img
+                                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85"
+                                    alt="Open landscape and mountain view" loading="lazy"><span class="format-tag">1:1 ·
+                                    Square</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>RIDE STORIES</span><time datetime="2026-03-05">05 MAR
+                                        2026</time></div>
+                                <h3>A stop with a view</h3>
+                                <p>Parked for a while. The view did all the talking.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Scenic viewpoint</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Bike Ride"
+                        data-title="Morning ride club">
+                        <article class="photo-card">
+                            <div class="photo-frame format-landscape"><img
+                                    src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1000&q=85"
+                                    alt="Motorcycle details" loading="lazy"><span class="format-tag">16:9 ·
+                                    YouTube</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>RIDE STORIES</span><time datetime="2026-03-19">19 MAR
+                                        2026</time></div>
+                                <h3>Morning ride club</h3>
+                                <p>Early starts, familiar faces, and open roads.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Highway stop</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- NATURE PHOTO CARDS -->
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Nature"
+                        data-title="Where the river breathes">
+                        <article class="photo-card">
+                            <div class="photo-frame format-instagram"><img
+                                    src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=900&q=85"
+                                    alt="Quiet lake surrounded by trees" loading="lazy"><span class="format-tag">4:5 ·
+                                    Instagram</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>NATURE FRAMES</span><time datetime="2026-01-08">08 JAN
+                                        2026</time></div>
+                                <h3>Where the river breathes</h3>
+                                <p>Still water, soft light, and a little silence.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Riverside</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Nature"
+                        data-title="A forest full of light">
+                        <article class="photo-card">
+                            <div class="photo-frame format-portrait"><img
+                                    src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=800&q=85"
+                                    alt="Tall trees in a forest" loading="lazy"><span class="format-tag">9:16 · TikTok /
+                                    Reels</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>NATURE FRAMES</span><time datetime="2026-01-29">29 JAN
+                                        2026</time></div>
+                                <h3>A forest full of light</h3>
+                                <p>Sunbeams finding their way through the trees.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Green woods</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Nature"
+                        data-title="The colour of calm">
+                        <article class="photo-card">
+                            <div class="photo-frame format-landscape"><img
+                                    src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1000&q=85"
+                                    alt="Golden sunrise over a field" loading="lazy"><span class="format-tag">16:9 ·
+                                    YouTube</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>NATURE FRAMES</span><time datetime="2026-02-17">17 FEB
+                                        2026</time></div>
+                                <h3>The colour of calm</h3>
+                                <p>Golden light turning an ordinary morning into art.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Open field</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Nature"
+                        data-title="After the rain">
+                        <article class="photo-card">
+                            <div class="photo-frame format-square"><img
+                                    src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=85"
+                                    alt="Misty green forest after rain" loading="lazy"><span class="format-tag">1:1 ·
+                                    Square</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>NATURE FRAMES</span><time datetime="2026-03-08">08 MAR
+                                        2026</time></div>
+                                <h3>After the rain</h3>
+                                <p>Everything feels a little newer after rainfall.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Woodland path</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Nature"
+                        data-title="Clouds doing their thing">
+                        <article class="photo-card">
+                            <div class="photo-frame format-landscape"><img
+                                    src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=1000&q=85"
+                                    alt="Clouds and dramatic sky" loading="lazy"><span class="format-tag">16:9 ·
+                                    YouTube</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>NATURE FRAMES</span><time datetime="2026-03-22">22 MAR
+                                        2026</time></div>
+                                <h3>Clouds doing their thing</h3>
+                                <p>Look up once in a while. The sky keeps changing.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Open sky</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- EVERYDAY MOMENTS PHOTO CARDS -->
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Moments"
+                        data-title="Coffee and a slow start">
+                        <article class="photo-card">
+                            <div class="photo-frame format-square"><img
+                                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"
+                                    alt="Coffee cup on a table" loading="lazy"><span class="format-tag">1:1 ·
+                                    Square</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>DAILY MOMENTS</span><time datetime="2026-01-03">03 JAN
+                                        2026</time></div>
+                                <h3>Coffee and a slow start</h3>
+                                <p>A quiet cup before the day gets busy.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Home café</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Moments"
+                        data-title="Little details, big memories">
+                        <article class="photo-card">
+                            <div class="photo-frame format-portrait"><img
+                                    src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=85"
+                                    alt="Flowers in warm natural light" loading="lazy"><span class="format-tag">9:16 ·
+                                    TikTok / Reels</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>DAILY MOMENTS</span><time datetime="2026-01-18">18 JAN
+                                        2026</time></div>
+                                <h3>Little details, big memories</h3>
+                                <p>Some moments are beautiful because they are small.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Everyday life</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Moments"
+                        data-title="A table full of stories">
+                        <article class="photo-card">
+                            <div class="photo-frame format-landscape"><img
+                                    src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1000&q=85"
+                                    alt="Food and shared moments" loading="lazy"><span class="format-tag">16:9 ·
+                                    YouTube</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>DAILY MOMENTS</span><time datetime="2026-02-06">06 FEB
+                                        2026</time></div>
+                                <h3>A table full of stories</h3>
+                                <p>Good food tastes even better with good company.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Weekend gathering</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Moments"
+                        data-title="A little bit of colour">
+                        <article class="photo-card">
+                            <div class="photo-frame format-instagram"><img
+                                    src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=85"
+                                    alt="Colourful lights at an event" loading="lazy"><span class="format-tag">4:5 ·
+                                    Instagram</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>DAILY MOMENTS</span><time datetime="2026-02-21">21 FEB
+                                        2026</time></div>
+                                <h3>A little bit of colour</h3>
+                                <p>Bright lights and a night to remember.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> City evening</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Moments"
+                        data-title="The art of doing nothing">
+                        <article class="photo-card">
+                            <div class="photo-frame format-landscape"><img
+                                    src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=85"
+                                    alt="Peaceful desert landscape" loading="lazy"><span class="format-tag">16:9 ·
+                                    YouTube</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>DAILY MOMENTS</span><time datetime="2026-03-12">12 MAR
+                                        2026</time></div>
+                                <h3>The art of doing nothing</h3>
+                                <p>A reminder that a pause can be productive too.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> A quiet afternoon</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- ADD MORE PHOTO CARDS HERE.
+                         Copy one complete .gallery-item block.
+                         Change data-category, data-title, image src,
+                         alt text, format class, date, title, description
+                         and location. See README.md for details. -->
+
+                    <!-- EXTRA CARDS: more travel, ride, nature and moments -->
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Travel"
+                        data-title="A view worth the climb">
+                        <article class="photo-card">
+                            <div class="photo-frame format-portrait"><img
+                                    src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=800&q=85"
+                                    alt="Mountain view from a hiking trail" loading="lazy"><span class="format-tag">9:16
+                                    · TikTok / Reels</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>TRAVEL DIARY</span><time datetime="2026-04-02">02 APR
+                                        2026</time></div>
+                                <h3>A view worth the climb</h3>
+                                <p>Every step felt worth it when this view appeared.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Mountain trail</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Bike Ride"
+                        data-title="Miles before breakfast">
+                        <article class="photo-card">
+                            <div class="photo-frame format-instagram"><img
+                                    src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=85"
+                                    alt="Motorbike ready for a ride" loading="lazy"><span class="format-tag">4:5 ·
+                                    Instagram</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>RIDE STORIES</span><time datetime="2026-04-05">05 APR
+                                        2026</time></div>
+                                <h3>Miles before breakfast</h3>
+                                <p>The best mornings sometimes begin with an engine.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Open highway</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Nature"
+                        data-title="Green is a feeling">
+                        <article class="photo-card">
+                            <div class="photo-frame format-square"><img
+                                    src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=900&q=85"
+                                    alt="Sunlit green leaves" loading="lazy"><span class="format-tag">1:1 ·
+                                    Square</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>NATURE FRAMES</span><time datetime="2026-04-09">09 APR
+                                        2026</time></div>
+                                <h3>Green is a feeling</h3>
+                                <p>A small reminder to slow down and breathe.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Garden walk</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-category="Moments"
+                        data-title="Golden hour, golden mood">
+                        <article class="photo-card">
+                            <div class="photo-frame format-landscape"><img
+                                    src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1000&q=85"
+                                    alt="Warm golden hour landscape" loading="lazy"><span class="format-tag">16:9 ·
+                                    YouTube</span><button class="view-photo" aria-label="View photo"><i
+                                        class="bi bi-arrows-fullscreen"></i></button></div>
+                            <div class="photo-info">
+                                <div class="photo-meta"><span>DAILY MOMENTS</span><time datetime="2026-04-12">12 APR
+                                        2026</time></div>
+                                <h3>Golden hour, golden mood</h3>
+                                <p>That magical little window before sunset.</p>
+                                <div class="photo-location"><i class="bi bi-geo-alt"></i> Evening walk</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="empty-state d-none" id="emptyState"><i class="bi bi-images"></i>
+                    <h3>No photos found</h3>
+                    <p>Try another keyword or choose a different collection.</p>
+                </div>
+                <div class="gallery-end-note"><span></span>
+                    <p>MORE MOMENTS TO COME</p><span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             PHOTO FORMAT GUIDE
+        ========================================== -->
+        <section class="format-section section-pad">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div><span class="eyebrow">UPLOAD YOUR WAY</span>
+                        <h2>Every format has<br>a <em>place here.</em></h2>
+                    </div>
+                    <p>Use the right card shape for the image you want to add. Your original image is not cropped or
+                        edited in the file.</p>
+                </div>
+                <div class="row g-3 format-guide">
+                    <div class="col-6 col-lg-3">
+                        <div class="format-guide-card">
+                            <div class="ratio-demo ratio-vertical"><span>9:16</span></div><strong>TikTok / Reels /
+                                Shorts</strong><small>1080 × 1920 px</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="format-guide-card">
+                            <div class="ratio-demo ratio-wide"><span>16:9</span></div><strong>YouTube /
+                                Landscape</strong><small>1920 × 1080 px</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="format-guide-card">
+                            <div class="ratio-demo ratio-insta"><span>4:5</span></div><strong>Instagram
+                                Portrait</strong><small>1080 × 1350 px</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="format-guide-card">
+                            <div class="ratio-demo ratio-square"><span>1:1</span></div><strong>Square
+                                Photo</strong><small>1080 × 1080 px</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             ABOUT / CONTACT SECTION
+        ========================================== -->
+        <section class="about-section section-pad" id="about">
+            <div class="container">
+                <div class="about-panel reveal">
+                    <div class="about-stamp"><i class="bi bi-camera"></i><span>EST. 2026</span></div>
+                    <div class="row align-items-end gy-4">
+                        <div class="col-lg-7"><span class="eyebrow">A LITTLE ABOUT THIS SPACE</span>
+                            <h2>Not just photos.<br><em>Pieces of life.</em></h2>
+                        </div>
+                        <div class="col-lg-5">
+                            <p>This is my personal photo journal — a place for travel memories, bike rides, nature, and
+                                everyday moments. The best stories deserve a frame.</p><a class="about-email"
+                                href="mailto:mahmudul19web@gmail.com">mahmudul19web@gmail.com <i
+                                    class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="navbar-brand brand-mark" href="#home">RUPOM<span>.</span><small>VISUAL JOURNAL</small></a>
+            <p>Made to keep the moments that matter.</p>
+            <span>© <span id="currentYear"></span> Mahmudul Haq Rupom</span>
+        </div>
+    </footer>
+
+    <!-- =========================================
+         LIGHTBOX MODAL
+    ========================================== -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close image"><i class="bi bi-x-lg"></i></button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image"><i
+                class="bi bi-chevron-left"></i></button>
+        <figure><img src="" alt="" id="lightboxImage">
+            <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Next image"><i
+                class="bi bi-chevron-right"></i></button>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="JavaScript/main.js"></script>
+</body>
+
+</html>
